@@ -1,24 +1,24 @@
 # COVID-19_Prediction
 Team Members: Bailey Brown, Karan Edikala, Mahalavanya Sriram, Meghana Kethidi, Shravya Donthisaram
 
-# Introduction
+## Introduction
 
-# Research Question
+## Research Question
 
-# Relevant Domain Information
+## Relevant Domain Information
 
-# Data Sources
+## Data Sources
 
-# Approach
+## Approach
   
-  Data understanding & EDA
+### Data understanding & EDA
   
-  Data Preparation 
+### Data Preparation 
   
-  Machine Learning 
+### Machine Learning 
   
-  Evaluation 
+### Evaluation 
 
-# Known Issues
+## Known Issues
 
-# Conclusion 
+## Conclusion 
