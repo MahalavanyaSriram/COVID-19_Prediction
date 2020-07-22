@@ -11,13 +11,13 @@ Team Members: Bailey Brown, Karan Edikala, Mahalavanya Sriram, Meghana Kethidi, 
 
 ## Approach
   
-### Data understanding & EDA
+###### Data understanding & EDA
   
-### Data Preparation 
+###### Data Preparation 
   
-### Machine Learning 
+###### Machine Learning 
   
-### Evaluation 
+###### Evaluation 
 
 ## Known Issues
 
