@@ -1,9 +1,6 @@
 # COVID-19_Prediction
-Team Members:
-  Karan Edikala
-  Mahalavanya Sriram
-  Meghana Kethidi
-  Shravya Donthisaram
-  
-  #Introduction
-  
+Team Members: Bailey Brown, Karan Edikala, Mahalavanya Sriram, Meghana Kethidi, Shravya Donthisaram
+
+# Introduction
+
+# Research Question
