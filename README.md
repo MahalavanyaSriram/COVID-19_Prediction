@@ -1,2 +1,9 @@
 # COVID-19_Prediction
-Team Members
+Team Members:
+  Karan Edikala
+  Mahalavanya Sriram
+  Meghana Kethidi
+  Shravya Donthisaram
+  
+  #Introduction
+  
