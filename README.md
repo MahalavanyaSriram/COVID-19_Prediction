@@ -25,12 +25,13 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 ## Approach
   
 ### Data understanding & EDA
-We will start off by reading the dataset into a pandas dataframe. We can then apply various summarizing functions to the data frame such as .info() and .describe(). It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed. 
+
 #### Describe data 
-Once you have identified the data set, you need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we can create a data dictionary that lists down the types of variables (e.g. sectors, company names, etc.), the number of records, and the types of analysis.For describing data learner needs to know one programming language(R ,Python or sas) and excel so that they can easily do first-level analysis and then can create data dictionary.
+Once you have identified the data set, we need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we can create a data dictionary that lists down the types of variables, the number of records, and the types of analysis. 
+
 #### Explore data
-To explore data, you can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.For exploring data learners needs to know EDA -Exploratory data analysis which could be done with the help of statistics knowledge.
-Step 3 Data Preparation
+EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.  We will start off by reading the dataset into a pandas dataframe. We can then apply various summarizing functions to the data frame such as .info() and .describe(). Different visualization tools like Seaborn are used for EDA. 
+It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed.
   
 ### Data Preparation 
   
@@ -38,7 +39,7 @@ Step 3 Data Preparation
 
 ### Evaluation 
 
-### Technologies/Libraries
+## Technologies/Libraries
 - Python 
 - Pandas 
 - Scikit-learn
