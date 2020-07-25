@@ -97,7 +97,9 @@ EDA will help to give insight of data and understand latest trends. To explore d
 It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed.
   
 ### Data Preparation 
-  
+As par tof the Data Evaluation, to handle missing values we will be performing Imputation. Any outliners will be taken care of. 
+If required, scaling would be done on some of the attributes and we would be dropping any features that is not needed. 
+
 ### Machine Learning   
 
 We can apply a regression model with the predictor variables being different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food, health, and covid factors. 
