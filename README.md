@@ -9,13 +9,13 @@ Team Members:
 ## Introduction
 
 ## Research Question
-How do socio-economic and health factors influence COVID-19 cases by state in the US? 
+How do food consumption and health factors around the world influence COVID-19 fatality rates?
 
 ## Relevant Domain Information
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7162753/
+
 
 ## Data Sources
-https://www.kaggle.com/nightranger77/covid19-state-data
+https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
 ## Approach
   
