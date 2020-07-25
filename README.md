@@ -106,6 +106,8 @@ We can apply a regression model with the predictor variables being different foo
 
 ### Evaluation 
 
+For regression, we will use the root mean square error to evaluate the model. And if we plan to use clustering we can also use metrics like within cluster sum of squares for evaluation.
+
 ## Technologies/Libraries
 - Python 
 - Pandas 
