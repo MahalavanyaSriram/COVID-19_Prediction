@@ -24,7 +24,7 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
 ## Attribute Description	
 
-![Image of Yaktocat](https://web.whatsapp.com/4a1a73fd-a55d-4348-ba16-0e32f7c6eb6c)
+![Image of Yaktocat]('/COVID-19_Prediction/DataTable.jpg')
 
 Country - 	Countries around the world
 Alcoholic Beverages - 	Percentage of food intake (kg) from alcoholic beverages
