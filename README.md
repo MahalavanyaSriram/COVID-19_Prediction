@@ -22,45 +22,12 @@ How do food consumption and health factors around the world influence COVID-19 f
 ## Data Sources
 https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
-## Attribute Description	
-Country - 	Countries around the world
-Alcoholic Beverages - 	Percentage of food intake (kg) from alcoholic beverages
-Animal fats - 	Percentage of food intake (kg) from animal fats
-Animal Products - 	Percentage of food intake (kg) from animal products
-Aquatic Products, Other - 	Percentage of food intake (kg) from aquatic products
-Cereals - Excluding Beer -	Percentage of food intake (kg) from cereals - excluding beer
-Eggs - 	Percentage of food intake (kg) from eggs
-Fish, Seafood - 	Percentage of food intake (kg) from fish, seafood
-Fruits : Excluding Wine - 	Percentage of food intake (kg) from fruits - excluding wine
-Meat - 	Percentage of food intake (kg) from meat
-Miscellaneous - 	other food
-Milk - Excluding Butter - 	milk consumption except butter
-Offals - 	internal organ meat 
-Oilcrops - 	oil crops that are used 
-Pulses - 	edible seedds like beans,lentils
-Spices - 	Seasoning and spices that are used
-Starchy Roots - 	foods that grow downward and holds the plant in place like potatoes, carrots and others
-Stimulants - 	% of Coffee, cocoa, tea consumption 
-Sugar Crops - 	crops that are major sources of sugar which includes sugar, honey, corn
-Sugar & Sweeteners - 	sugar and sugar subtitutes
-Treenuts - 	% of nuts consumed
-Vegetal Products - 	% of vegetable products consumed
-Vegetable Oils - 	prominent oil crops consumed
-Vegetables - 	% of vegetables consumed
-Obesity - 	people suffering from obesity
-Undernourished - 	% of populations that is undernourished
-Confirmed - 	No of confirmed covid cases
-Deaths - 	No of deaths reported due to covid
-Recovered - 	No of patients recovered from Covid
-Active -	No of covid cases that are currently active
-Population - 	 Total Population reported for each nation
-
 ## Approach
   
 ### Data understanding & EDA
 
 #### Describe data 
-Once you have identified the data set, we need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we can create a data dictionary that lists down the types of variables, the number of records, and the types of analysis. 
+Once we have identified the data set, we need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we can create a data dictionary that lists down the types of variables, the number of records, and the types of analysis. 
 
 #### Explore data
 EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.  We will start off by reading the dataset into a pandas dataframe. We can then apply various summarizing functions to the data frame such as .info() and .describe(). Different visualization tools like Seaborn are used for EDA. 
