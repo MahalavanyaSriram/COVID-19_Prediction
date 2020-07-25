@@ -1,4 +1,4 @@
-# **Influences of food consumption and health factors on COVID-19**
+# **Influences of food consumption and health factors on COVID-19 fatalities**
 Team Members: 
 - Bailey Brown
 - Karan Edikala
