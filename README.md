@@ -24,35 +24,65 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
 ## Attribute Description	
 Country - 	Countries around the world
+
 Alcoholic Beverages - 	Percentage of food intake (kg) from alcoholic beverages
+
 Animal fats - 	Percentage of food intake (kg) from animal fats
+
 Animal Products - 	Percentage of food intake (kg) from animal products
+
 Aquatic Products, Other - 	Percentage of food intake (kg) from aquatic products
+
 Cereals - Excluding Beer -	Percentage of food intake (kg) from cereals - excluding beer
+
 Eggs - 	Percentage of food intake (kg) from eggs
+
 Fish, Seafood - 	Percentage of food intake (kg) from fish, seafood
+
 Fruits : Excluding Wine - 	Percentage of food intake (kg) from fruits - excluding wine
+
 Meat - 	Percentage of food intake (kg) from meat
+
 Miscellaneous - 	other food
+
 Milk - Excluding Butter - 	milk consumption except butter
+
 Offals - 	internal organ meat 
+
 Oilcrops - 	oil crops that are used 
+
 Pulses - 	edible seedds like beans,lentils
+
 Spices - 	Seasoning and spices that are used
+
 Starchy Roots - 	foods that grow downward and holds the plant in place like potatoes, carrots and others
+
 Stimulants - 	% of Coffee, cocoa, tea consumption 
+
 Sugar Crops - 	crops that are major sources of sugar which includes sugar, honey, corn
+
 Sugar & Sweeteners - 	sugar and sugar subtitutes
+
 Treenuts - 	% of nuts consumed
+
 Vegetal Products - 	% of vegetable products consumed
+
 Vegetable Oils - 	prominent oil crops consumed
+
 Vegetables - 	% of vegetables consumed
+
 Obesity - 	people suffering from obesity
+
 Undernourished - 	% of populations that is undernourished
+
 Confirmed - 	No of confirmed covid cases
+
 Deaths - 	No of deaths reported due to covid
+
 Recovered - 	No of patients recovered from Covid
+
 Active -	No of covid cases that are currently active
+
 Population - 	 Total Population reported for each nation
 
 ## Approach
