@@ -1,4 +1,4 @@
-# **COVID-19_Prediction**
+# **Influnces of food consumption and health factors on COVID-19**
 Team Members: 
 - Bailey Brown
 - Karan Edikala
