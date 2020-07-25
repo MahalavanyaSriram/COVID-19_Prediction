@@ -97,7 +97,7 @@ EDA will help to give insight of data and understand latest trends. To explore d
 It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed.
   
 ### Data Preparation 
-As par tof the Data Evaluation, to handle missing values we will be performing Imputation. Any outliners will be taken care of. 
+As part of the Data Evaluation, to handle missing values we will be performing Imputation. Any outliners will be taken care of. 
 If required, scaling would be done on some of the attributes and we would be dropping any features that is not needed. 
 
 ### Machine Learning   
