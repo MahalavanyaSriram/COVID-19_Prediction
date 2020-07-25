@@ -100,6 +100,8 @@ It is also important to see the distribution of variables and for this we can pl
   
 ### Machine Learning   
 
+We can apply a regression model with the predictor variables being different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food, health, and covid factors. 
+
 ### Evaluation 
 
 ## Technologies/Libraries
