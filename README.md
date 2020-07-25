@@ -23,6 +23,9 @@ How do food consumption and health factors around the world influence COVID-19 f
 https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
 ## Attribute Description	
+
+![Image of Yaktocat](https://web.whatsapp.com/4a1a73fd-a55d-4348-ba16-0e32f7c6eb6c)
+
 Country - 	Countries around the world
 Alcoholic Beverages - 	Percentage of food intake (kg) from alcoholic beverages
 Animal fats - 	Percentage of food intake (kg) from animal fats
