@@ -24,7 +24,7 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
 ## Attribute Description	
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](/DataTable.jpg?raw=true "Data Table")
 
 
 Country - 	Countries around the world
