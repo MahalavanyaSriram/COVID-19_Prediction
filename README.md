@@ -89,4 +89,6 @@ For regression, we will use the root mean square error to evaluate the model. An
 
 ## Known Issues
 
+The amount of observations are limited since the data is aggregated by country.
+
 ## Conclusion 
