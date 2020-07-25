@@ -25,7 +25,14 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 ###### Data Preparation 
   
 ###### Machine Learning 
-  
+Technologies/Libraries:
+-Python
+-Pandas
+-Jupyter
+-Scikit-learn
+-Numpy
+-Seaborn
+-Scipy  
 ###### Evaluation 
 
 ## Known Issues
