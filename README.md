@@ -24,10 +24,18 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
   
 ###### Data Preparation 
   
-###### Machine Learning 
-Technologies/Libraries: Python, Pandas, Jupyter, Scikit-learn, Numpy, Seaborn, Scipy  
+###### Machine Learning   
 
 ###### Evaluation 
+
+## Technologies/Libraries
+- Python 
+- Pandas 
+- Scikit-learn
+- Jupyter
+- Numpy
+- Seaborn
+- Scipy 
 
 ## Known Issues
 
