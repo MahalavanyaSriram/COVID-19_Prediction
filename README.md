@@ -24,7 +24,7 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 
 ## Attribute Description	
 
-![Alt text](/DataTable.jpg?raw=true "Data Table")
+![Alt text](/DataTable.jpeg?raw=true "Data Table")
 
 All the Units are in percentage except Population
 
