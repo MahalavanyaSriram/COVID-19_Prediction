@@ -24,7 +24,7 @@ https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
 ## Approach
   
 ### Data understanding & EDA
-This stage comprises of two key steps to understand the available data and identify new relevant data in order to solve the business problem.
+We will start off by reading the dataset into a pandas dataframe. We can then apply various summarizing functions to the data frame such as .info() and .describe(). It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed. 
 #### Describe data 
 Once you have identified the data set, you need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we can create a data dictionary that lists down the types of variables (e.g. sectors, company names, etc.), the number of records, and the types of analysis.For describing data learner needs to know one programming language(R ,Python or sas) and excel so that they can easily do first-level analysis and then can create data dictionary.
 #### Explore data
