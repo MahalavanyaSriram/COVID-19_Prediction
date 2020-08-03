@@ -39,18 +39,23 @@ Once we have identified the data set, we need to describe its contents and explo
 EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.In our analysis, we started off by reading the dataset into a pandas dataframe. Then ploted various graphs to gather various insights on the given data
 
 1. Top 15 countries where the Death Rate is high.
+
 ![country_vs_deaths](/Images/country_vs_deaths.png)
 
 2. Contries with highest Obesity Rate.
+
 ![country_vs_obesity](/Images/country_vs_obesity.png)
 
-3. Countries that are highly undernourished
+3. Countries that are highly undernourished.
+
 ![death_vs_undernourished](/Images/country_vs_undernourished.png)
 
-4. Death vs Obesity Pecentage for countries with highest Death rates
+4. Death vs Obesity Pecentage for countries with highest Death rates.
+
 ![death_vs_obesity](/Images/newplot.png)
 
-5. Percentage of food supply in covid affected countries
+5. Percentage of food supply in covid affected countries.
+
 ![percent_food_supply](/Images/percent_food_supply.png)
 
 ### Data Preparation 
