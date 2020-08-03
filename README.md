@@ -33,20 +33,44 @@ All the Units are in percentage except Population
 ### Data understanding & EDA
 
 #### Describe data 
-Once we have identified the data set, we need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we can create a data dictionary that lists down the types of variables, the number of records, and the types of analysis. 
+Once we have identified the data set, we need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we created a data dictionary called covid_food_data and then applied various summarizing functions such as info(), describe(), head(), etc.
 
 #### Explore data
-EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.  We will start off by reading the dataset into a pandas dataframe. We can then apply various summarizing functions to the data frame such as .info() and .describe(). Different visualization tools like seaborn are used for EDA. It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed.
-  
+EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.In our analysis, we started off by reading the dataset into a pandas dataframe. Then ploted various graphs to gather various insights on the given data
+
+1. Top 15 countries where the Death Rate is high.
+![country_vs_deaths](/Images/country_vs_deaths)
+
+2. Contries with highest Obesity Rate.
+![country_vs_obesity](/Images/country_vs_obesity)
+
+3. Countries that are highly undernourished
+![death_vs_undernourished](/Images/country_vs_undernourished.png)
+
+4. Death vs Obesity Pecentage for countries with highest Death rates
+![death_vs_obesity](/Images/newplot.png)
+
+5. Percentage of food supply in covid affected countries
+![percent_food_supply](/Images/percent_food_supply.png)
+
 ### Data Preparation 
-Data cleaning & pre-processing:
-- checked for nulls in the dataset & handled missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean; attribute ‘Undernourished’ with entries <2.5 were replaced with 2.5; object type of this column was changed to float 
-- missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID
-- handled the missing values for 'Active’- we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered 
-- it was observed (and confirmed with code) that the animal generated products, like meat, milk , eggs etc., sum up to the 'Animal Products' column; similarly, tree or plant generated products like pulses, cereals etc. including alcohol sum up to the 'Vegetal Products' column; so, for further analysis, only utilizing the 'Country', 'Animal Products', 'Vegetal Products', 'Obesity', 'Undernourished', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Population' columns  
-- moreover, it is observed that cereals (excluding beer) is the highly consumed product; so, including this column as well to gain more insights
-- dropped the column 'Unit' (all except Population) as it doesn't specify anything in detail
-- data reduction: since the sample is relatively big with data of all of the countries around the world, we rounded off the values inorder to reduce the storage capacity
+
+Steps that were followed in Data cleaning & pre-processing: .
+
+1. Gather data: We extracted the data and converted it to the CSV format. CSV stands for Comma Separated Values. We used pandas for this step
+
+2. Discover and assess data : After collecting the data, it is important to discover each dataset. This step is about getting to know the data and understanding what has to be done before the data becomes useful in a particular context. We discovered few missing values and understood the function of all columns in the dataset. We also figured out few columns like 'Animal fats', 'Aquatic Products, Other','Eggs','Fish, Seafood', 'Meat', 'Milk - Excluding Butter', 'Offals' together sum up to the column Animal Products and Similarly tree or plant generated products sum up to the 'vegetal Products' column. 
+
+3. Cleanse and validate data:
+  Cleaning up the data is traditionally the most time consuming part of the data preparation process, but it’s crucial for removing faulty data and filling in gaps.   Important tasks here include:
+    - Removing extraneous data and outliers: We removed sub columns that sums up to a generalised columns such as Animal Products and vegetal Products as discussed       earlier in data discovery.
+    - Filling in missing values : Once data has been cleansed, it must be validated by testing for errors in the data preparation process up to this
+    When we convert the dataset to the CSV format and get the info about the data it will have missing values which is usually represented by NA. There are many         ways to handle missing values. Whenever we come across minute missing values we are going to drop the rows using the .dropna function. Ex. missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID We handled few missing values filling it with the mean of the column like missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean. We also handled the missing values for 'Active’- we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered.
+   - Data reduction: since the sample is relatively big with data of all of the countries around the world, we rounded off the values inorder to reduce the storage capacity
+
+4. Transform and enrich data
+Transforming data is the process of updating the format or value entries in order to reach a well-defined outcome, or to make the data more easily understood by a wider audience. In our dataset transformation is done with attribute ‘Undernourished’ where entries '<2.5' were replaced with 2.5; object type of this column was changed to float. Enriching data refers to adding and connecting data with other related information to provide deeper insights. It is observed that cereals (excluding beer) is the highly consumed product in our dataset; so, we included this column as well to gain more insights.  
+
 
 ### Machine Learning   
 
@@ -57,7 +81,6 @@ Unsupervised Learning (Clustering):
 - data was scaled with RobustScaler()
 - completed PCA (using sklearn.decomposition) in order to see how much variability each principle component captured, and found that we could capture close to 90% of the variation from the first two components, so we decided to proceed with 2 components
 - KMeans clustering (from sklearn.cluster) performed with 3 clusters 
-- 
 - In KMeans clustering, we need to decide the clusters before implementing the algorithm. Sometimes, we may not correctly interpret the number of clusters and it becomes challenging to predict the number of clusters. For Hierarchical clustering we do not need to know the number of clusters prior implementing the algorithm —> for these reasons, we choose to complete Hierarchial clustering 
 
 ### Evaluation 
