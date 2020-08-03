@@ -39,7 +39,14 @@ Once we have identified the data set, we need to describe its contents and explo
 EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.  We will start off by reading the dataset into a pandas dataframe. We can then apply various summarizing functions to the data frame such as .info() and .describe(). Different visualization tools like seaborn are used for EDA. It is also important to see the distribution of variables and for this we can plot histograms and standardize the dataset if needed.
   
 ### Data Preparation 
-As part of the Data Preparation, to handle missing values we will be performing imputation. Any outliers will be taken care of. If required, scaling would be done on some of the attributes and we would be dropping any variables that are not needed. 
+Data cleaning & pre-processing:
+- checked for nulls in the dataset & handled missing values in the obesity and undernourished columns by replacing with their mean; attribute ‘undernourished’ with entries <2.5 were replaced with 2.5; object type of this column was changed to float 
+- missing values in confirmed deaths and recovered columns were dropped, as most of them are geographically dispersed islands and are not affected by covid
+- handling the missing values for 'Active’- we have the confirmed covid cases, deaths and recovered so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered 
+- it was observed (and confirmed with code) that the animal generated products like meat, milk , eggs etc. sum up to the 'Animal Products' column, and tree or plant generated products like Pulses, Cereals etc. including alcohol sum up to the 'Vegetal Products' column—> So, for further analysis taking only the Country, Animal Products, Vegetal Products, Obesity, Undernourished, Confirmed, Deaths, Recovered, Active, Population into consideration. Moreover, it is observed that Cereals - Excluding Beer is the highly consumed product. So, including this column as well to gain more insights
+- Dropped the column Unit (all except Population) as it doesn't specify anything in detail
+- Data Reduction: since the sample is relatively big with data of all the countries around the world, inroder to reduce the storage capacity round off the values
+
 
 ### Machine Learning   
 
