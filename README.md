@@ -8,7 +8,7 @@ Team Members:
 
 ## Introduction
 
-Coronavirus is caused by severe acute respiratory syndrome coronavirus 2(SARS-CoV-2).  It was initially identified in December 2019 in Wuhan, China and resulted in an ongoing worldwide pandemic.  As of July 25 2020, there have been 15.7 million cases reported worldwide and resulted in more than 640,000 deaths. COVID-19 has been especially fatal to individuals with pre-existing health conditions. According to a research study that was looking at diets around the world and their COVID-19 fatalities noted that, “The high rate of consumption of diets high in saturated fats, sugars, and refined carbohydrates (collectively called Western diet, WD) worldwide, contribute to the prevalence of obesity and type 2 diabetes, and could place these populations at an increased risk for severe COVID-19 pathology and mortality”. For this project, our group will be conducting analysis on food consumption and health factors worldwide and see how these factors influence the COVID-19 fatalities. 
+Coronavirus is caused by severe acute respiratory syndrome coronavirus 2(SARS-CoV-2).  It was initially identified in December 2019 in Wuhan, China and resulted in an ongoing worldwide pandemic.  As of July 25 2020, there have been 15.7 million cases reported worldwide and resulted in more than 640,000 deaths. COVID-19 has been especially fatal to individuals with pre-existing health conditions. According to a research study that was looking at diets around the world and their COVID-19 fatalities noted that, “The high rate of consumption of diets high in saturated fats, sugars, and refined carbohydrates (collectively called Western diet, WD) worldwide, contribute to the prevalence of obesity and type 2 diabetes, and could place these populations at an increased risk for severe COVID-19 pathology and mortality”. For this project, our group will be conducting analysis on worldwide food consumption, health factors and see how these factors influence the COVID-19 fatalities. 
 
 ## Research Question
 How do food consumption and health factors around the world influence COVID-19 fatality rates?
@@ -21,6 +21,7 @@ How do food consumption and health factors around the world influence COVID-19 f
 
 ## Data Sources
 https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
+Dataset Name:datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 ## Attribute Description	
 
@@ -30,19 +31,19 @@ All the Units are in percentage except Population
 
 ## Approach
   
-### Data understanding & EDA
+### Data understanding & Exploratory Data Analysis(EDA)
 
 #### Describe data 
 Once we have identified the data set, we need to describe its contents and explore insights to better understand the data and its business implications. To describe the data, we created a data dictionary called covid_food_data and then applied various summarizing functions such as info(), describe(), head(), etc.
 
 #### Explore data
-EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.In our analysis, we started off by reading the dataset into a pandas dataframe. Then ploted various graphs to gather various insights on the given data
+EDA will help to give insight of data and understand latest trends. To explore data, we can plot simple graphs on Python, e.g. to understand the trend in data or to get a graphical representation of data for better understanding to get useful insights.In our analysis, we started off by reading the dataset into a pandas dataframe and then plotted various graphs to gather various insights and trends on the data.
 
-1. Top 15 countries where the Death Rate is high.
+1. Top 15 Countries where the Death Rate is high.
 
 ![country_vs_deaths](/Images/country_vs_deaths.png)
 
-2. Contries with highest Obesity Rate.
+2. Countries with highest Obesity Rate.
 
 ![country_vs_obesity](/Images/country_vs_obesity.png)
 
@@ -50,28 +51,28 @@ EDA will help to give insight of data and understand latest trends. To explore d
 
 ![death_vs_undernourished](/Images/country_vs_undernourished.png)
 
-4. Death vs Obesity Pecentage for countries with highest Death rates.
+4. Death vs Obesity Pecentage for Countries with highest Death rates.
 
 ![death_vs_obesity](/Images/newplot.png)
 
-5. Percentage of food supply in covid affected countries.
+5. Percentage of food supply in COVID affected Countries.
 
 ![percent_food_supply](/Images/percent_food_supply.png)
 
 ### Data Preparation 
 
-Steps that were followed in Data cleaning & pre-processing: .
+Steps that were followed in Data Cleaning & Data Pre-processing: .
 
-1. Gather data: We extracted the data and converted it to the CSV format. CSV stands for Comma Separated Values. We used pandas for this step
+1. Gather data and Read-in: We extracted the data and converted it to the CSV format. CSV stands for Comma Separated Values. We used pandas for the read-in step.
 
-2. Discover and assess data : After collecting the data, it is important to discover each dataset. This step is about getting to know the data and understanding what has to be done before the data becomes useful in a particular context. We discovered few missing values and understood the function of all columns in the dataset. We also figured out few columns like 'Animal fats', 'Aquatic Products, Other','Eggs','Fish, Seafood', 'Meat', 'Milk - Excluding Butter', 'Offals' together sum up to the column Animal Products and Similarly tree or plant generated products sum up to the 'vegetal Products' column. 
+2. Discover and assess data : After collecting the data, it is important to discover each dataset. This step is about getting to know the data and understanding what has to be done before the data becomes useful in a particular context. We discovered few missing values and understood the function of all columns in the dataset. We also figured out that few columns like 'Animal fats', 'Aquatic Products, Other','Eggs','Fish', 'Seafood', 'Meat', 'Milk - Excluding Butter', 'Offals' together add up to the column 'Animal Products'. Similarly, tree or plant generated products add up to the 'vegetal Products' column. 
 
 3. Cleanse and validate data:
   Cleaning up the data is traditionally the most time consuming part of the data preparation process, but it’s crucial for removing faulty data and filling in gaps.   Important tasks here include:
-    - Removing extraneous data and outliers: We removed sub columns that sums up to a generalised columns such as Animal Products and vegetal Products as discussed       earlier in data discovery.
+    - Removing extraneous data and outliers: We removed sub columns that adds up to a generalised columns such as Animal Products and vegetal Products as discussed       earlier in data discovery.
     - Filling in missing values : Once data has been cleansed, it must be validated by testing for errors in the data preparation process up to this
     When we convert the dataset to the CSV format and get the info about the data it will have missing values which is usually represented by NA. There are many         ways to handle missing values. Whenever we come across minute missing values we are going to drop the rows using the .dropna function. Ex. missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID We handled few missing values filling it with the mean of the column like missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean. We also handled the missing values for 'Active’- we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered.
-   - Data reduction: since the sample is relatively big with data of all of the countries around the world, we rounded off the values inorder to reduce the storage capacity
+   - Data reduction: Since the sample is relatively big with data of all of the countries around the world, we rounded off the values inorder to reduce the storage capacity
 
 4. Transform and enrich data
 Transforming data is the process of updating the format or value entries in order to reach a well-defined outcome, or to make the data more easily understood by a wider audience. In our dataset transformation is done with attribute ‘Undernourished’ where entries '<2.5' were replaced with 2.5; object type of this column was changed to float. Enriching data refers to adding and connecting data with other related information to provide deeper insights. It is observed that cereals (excluding beer) is the highly consumed product in our dataset; so, we included this column as well to gain more insights.  
