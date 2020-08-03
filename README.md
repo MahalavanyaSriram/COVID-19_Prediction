@@ -52,6 +52,14 @@ Data cleaning & pre-processing:
 
 We can apply a regression model with the predictor variables being different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food, health, and covid factors. 
 
+Unsupervised Learning (Clustering):
+- since all other foods sum up to animal products and vegetal products, we subsetted the data to include only those foods to avoid multi-coolinearity
+- data was scaled with RobustScaler()
+- completed PCA (using sklearn.decomposition) in order to see how much variability each principle component captured, and found that we could capture close to 90% of the variation from the first two components, so we decided to proceed with 2 components
+- KMeans clustering (from sklearn.cluster) performed with 3 clusters 
+- 
+- In KMeans clustering, we need to decide the clusters before implementing the algorithm. Sometimes, we may not correctly interpret the number of clusters and it becomes challenging to predict the number of clusters. For Hierarchical clustering we do not need to know the number of clusters prior implementing the algorithm —> for these reasons, we choose to complete Hierarchial clustering 
+
 ### Evaluation 
 
 For regression, we will use the root mean square error to evaluate the model. And if we plan to use clustering we can also use metrics like within cluster sum of squares for evaluation.
