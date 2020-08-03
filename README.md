@@ -40,13 +40,13 @@ EDA will help to give insight of data and understand latest trends. To explore d
   
 ### Data Preparation 
 Data cleaning & pre-processing:
-- checked for nulls in the dataset & handled missing values in the obesity and undernourished columns by replacing with their mean; attribute ‘undernourished’ with entries <2.5 were replaced with 2.5; object type of this column was changed to float 
-- missing values in confirmed deaths and recovered columns were dropped, as most of them are geographically dispersed islands and are not affected by covid
-- handling the missing values for 'Active’- we have the confirmed covid cases, deaths and recovered so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered 
-- it was observed (and confirmed with code) that the animal generated products like meat, milk , eggs etc. sum up to the 'Animal Products' column, and tree or plant generated products like Pulses, Cereals etc. including alcohol sum up to the 'Vegetal Products' column—> So, for further analysis taking only the Country, Animal Products, Vegetal Products, Obesity, Undernourished, Confirmed, Deaths, Recovered, Active, Population into consideration. Moreover, it is observed that Cereals - Excluding Beer is the highly consumed product. So, including this column as well to gain more insights
-- Dropped the column Unit (all except Population) as it doesn't specify anything in detail
-- Data Reduction: since the sample is relatively big with data of all the countries around the world, inroder to reduce the storage capacity round off the values
-
+- checked for nulls in the dataset & handled missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean; attribute ‘Undernourished’ with entries <2.5 were replaced with 2.5; object type of this column was changed to float 
+- missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID
+- handled the missing values for 'Active’- we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered 
+- it was observed (and confirmed with code) that the animal generated products, like meat, milk , eggs etc., sum up to the 'Animal Products' column; similarly, tree or plant generated products like pulses, cereals etc. including alcohol sum up to the 'Vegetal Products' column; so, for further analysis, only utilizing the 'Country', 'Animal Products', 'Vegetal Products', 'Obesity', 'Undernourished', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Population' columns  
+- moreover, it is observed that cereals (excluding beer) is the highly consumed product; so, including this column as well to gain more insights
+- dropped the column 'Unit' (all except Population) as it doesn't specify anything in detail
+- data reduction: since the sample is relatively big with data of all of the countries around the world, we rounded off the values inorder to reduce the storage capacity
 
 ### Machine Learning   
 
