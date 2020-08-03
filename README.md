@@ -20,7 +20,7 @@ How do food consumption and health factors around the world influence COVID-19 f
 - https://www.nature.com/articles/s41430-020-0634-3
 
 ## Data Sources
-https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset
+https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset.           
 Dataset Name:datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 ## Attribute Description	
@@ -65,14 +65,14 @@ Steps that were followed in Data Cleaning & Data Pre-processing: .
 
 1. Gather data and Read-in: We extracted the data and converted it to the CSV format. CSV stands for Comma Separated Values. We used pandas for the read-in step.
 
-2. Discover and assess data : After collecting the data, it is important to discover each dataset. This step is about getting to know the data and understanding what has to be done before the data becomes useful in a particular context. We discovered few missing values and understood the function of all columns in the dataset. We also figured out that few columns like 'Animal fats', 'Aquatic Products, Other','Eggs','Fish', 'Seafood', 'Meat', 'Milk - Excluding Butter', 'Offals' together add up to the column 'Animal Products'. Similarly, tree or plant generated products add up to the 'vegetal Products' column. 
+2. Discover and assess data : After collecting the data, it is important to discover each dataset. This step is about getting to know the data and understanding what has to be done before the data becomes useful in a particular context. We discovered few missing values and understood the function of all columns in the dataset. We also figured out that few columns like 'Animal fats', 'Aquatic Products, Other', 'Eggs','Fish', 'Seafood', 'Meat', 'Milk - Excluding Butter', 'Offals' together add up to the column 'Animal Products'. Similarly, tree or plant generated products add up to the 'vegetal Products' column. 
 
 3. Cleanse and validate data:
   Cleaning up the data is traditionally the most time consuming part of the data preparation process, but it’s crucial for removing faulty data and filling in gaps.   Important tasks here include:
-    - Removing extraneous data and outliers: We removed sub columns that adds up to a generalised columns such as Animal Products and vegetal Products as discussed       earlier in data discovery.
-    - Filling in missing values : Once data has been cleansed, it must be validated by testing for errors in the data preparation process up to this
-    When we convert the dataset to the CSV format and get the info about the data it will have missing values which is usually represented by NA. There are many         ways to handle missing values. Whenever we come across minute missing values we are going to drop the rows using the .dropna function. Ex. missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID We handled few missing values filling it with the mean of the column like missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean. We also handled the missing values for 'Active’- we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered.
-   - Data reduction: Since the sample is relatively big with data of all of the countries around the world, we rounded off the values inorder to reduce the storage capacity
+    - Removing extraneous data and outliers: We removed sub columns that adds up to a generalized columns such as Animal Products and vegetal Products as discussed       earlier in data discovery.
+    - Filling in missing values : Once data has been cleansed, it must be validated by testing for errors in the data preparation process.
+    When we convert the dataset to the CSV format and get the information about the data it will have missing values which is usually represented by NA. There are many         ways to handle missing values. Whenever we came across minute missing values we are going to drop the rows using the .dropna function. Ex. missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID We handled few missing values filling it with the mean of the column like missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean. We also handled the missing values for 'Active’column - we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered.
+   - Data reduction: Since the data in the sample has long decimal values, we rounded them inorder to reduce the storage capacity
 
 4. Transform and enrich data
 Transforming data is the process of updating the format or value entries in order to reach a well-defined outcome, or to make the data more easily understood by a wider audience. In our dataset transformation is done with attribute ‘Undernourished’ where entries '<2.5' were replaced with 2.5; object type of this column was changed to float. Enriching data refers to adding and connecting data with other related information to provide deeper insights. It is observed that cereals (excluding beer) is the highly consumed product in our dataset; so, we included this column as well to gain more insights.  
@@ -80,7 +80,7 @@ Transforming data is the process of updating the format or value entries in orde
 
 ### Machine Learning   
 
-We can apply a regression model with the predictor variables being different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food, health, and covid factors. 
+We can apply a regression model with the predictor variables being different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food consumption, health factors and their effect on COVID death rates. 
 
 Unsupervised Learning (Clustering):
 - Since all other foods sum up to animal products and vegetal products, we subsetted the data to include only those foods to avoid multi-coolinearity
