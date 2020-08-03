@@ -74,7 +74,7 @@ Steps that were followed in Data Cleaning & Data Pre-processing: .
     When we convert the dataset to the CSV format and get the information about the data it will have missing values which is usually represented by NA. There are many         ways to handle missing values. Whenever we came across minute missing values we are going to drop the rows using the .dropna function. Ex. missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID We handled few missing values filling it with the mean of the column like missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean. We also handled the missing values for 'Active’column - we have the confirmed COVID cases, deaths, and recovered, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered.
    - Data reduction: Since the data in the sample has long decimal values, we rounded them inorder to reduce the storage capacity
 
-4. Transform and enrich data
+4. Transform and enrich data:
 Transforming data is the process of updating the format or value entries in order to reach a well-defined outcome, or to make the data more easily understood by a wider audience. In our dataset transformation is done with attribute ‘Undernourished’ where entries '<2.5' were replaced with 2.5; object type of this column was changed to float. Enriching data refers to adding and connecting data with other related information to provide deeper insights. It is observed that cereals (excluding beer) is the highly consumed product in our dataset; so, we included this column as well to gain more insights.  
 
 
