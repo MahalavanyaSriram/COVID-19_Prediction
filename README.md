@@ -91,7 +91,7 @@ Unsupervised Learning (Clustering):
 
 ### Evaluation 
 
-For regression, we will use the root mean square error to evaluate the model. And if we plan to use clustering we can also use metrics like within cluster sum of squares for evaluation.
+For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a country belongs to based on food and health factors of the country.¶
 
 ## Technologies/Libraries
 - Python 
@@ -109,3 +109,4 @@ For regression, we will use the root mean square error to evaluate the model. An
 Amount of observations are limited since the data is aggregated by country.
 
 ## Conclusion 
+
