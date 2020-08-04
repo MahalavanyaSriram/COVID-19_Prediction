@@ -104,12 +104,12 @@ Unsupervised Learning (Clustering):
 
 Supervised Learning (Decision Trees):
 - Next, we decided to build a decision tree using DecisionTreeClassifier from sklearn.tree. 
-- It seems that cluster 1 can be described by countries that obesity greater than -0.354, consume less than -0.12 vegetal products, and have undernourishment rate less than -0.029. Cluster 2 can be described by countries that have obesity greater than -0.354, deaths > 3.4, and undernourishment rate greater than 1.392. Cluster 3 can be described by countries that have obesity greater than -0.354, and deaths less than 3.4. Based on this cluster 2 contains countries that have the highest fatalities, and should make lifestyle / policy changes for the future.
+- Decision tree created has 3 clusters. Based on the tree results, cluster 2 contains Countries that have the highest fatalities, and should make lifestyle / policy changes for the future.
 
 
 ### Evaluation 
 
-For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a Country belongs to based on food and health factors of the Country.
+For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 92% accuracy on predicting which cluster a Country belongs to based on food and health factors of the Country.
 
 
 ## Known Issues
