@@ -90,7 +90,7 @@ Steps that were followed in Data Cleaning & Data Pre-processing: .
 
 ### Machine Learning   
 
-We  a regression model with the predictor variables as different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food consumption, health factors and their effect on COVID death rates. 
+We performed Unsupervised learning using Clustering to see how different countries are grouped based on food consumption, health factors and COVID death rates. And we executed Supervised learning using Decision trees.
 
 Unsupervised Learning (Clustering):
 - Since all other foods add up to attributes 'Animal products' and 'Vegetal products', we altered the data to include only these attributes to avoid multi-colinearity
@@ -109,12 +109,12 @@ Supervised Learning (Decision Trees):
 
 ### Evaluation 
 
-For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a country belongs to based on food and health factors of the country.
+For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a Country belongs to based on food and health factors of the Country.
 
 
 ## Known Issues
 
-Amount of observations are limited since the data is aggregated by country.
+Amount of observations are limited since the data is aggregated by Country.
 
 ## Conclusion 
 
