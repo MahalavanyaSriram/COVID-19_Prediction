@@ -25,7 +25,7 @@ Dataset Name:datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 ## Attribute Description	
 
-![Alt text](/Images/DataTable.jpeg?raw=true "Data Table")
+![Alt text](/[images/DataTable.jpeg?raw=true "Data Table")
 
 All the Units are in percentage except Population
 
@@ -52,23 +52,23 @@ EDA will help to give insight of data and understand latest trends. To explore d
 
 1. Top 15 Countries where the Death Rate is high.
 
-![country_vs_deaths](/Images/country_vs_deaths.png)
+![country_vs_deaths](/images/country_vs_deaths.png)
 
 2. Countries with highest Obesity Rate.
 
-![country_vs_obesity](/Images/country_vs_obesity.png)
+![country_vs_obesity](/images/country_vs_obesity.png)
 
 3. Countries that are highly undernourished.
 
-![death_vs_undernourished](/Images/country_vs_undernourished.png)
+![death_vs_undernourished](/images/country_vs_undernourished.png)
 
 4. Death vs Obesity Pecentage for Countries with highest Death rates.
 
-![death_vs_obesity](/Images/newplot.png)
+![death_vs_obesity](/images/newplot.png)
 
 5. Percentage of food supply in COVID affected Countries.
 
-![percent_food_supply](/Images/percent_food_supply.png)
+![percent_food_supply](/images/percent_food_supply.png)
 
 ### Data Preparation 
 
