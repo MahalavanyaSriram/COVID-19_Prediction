@@ -21,7 +21,7 @@ How do food consumption and health factors around the world influence COVID-19 f
 
 ## Data Sources
 https://www.kaggle.com/mariaren/covid19-healthy-diet-dataset.           
-Dataset Name:datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
+Dataset Name: datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 ## Attribute Description	
 
@@ -35,7 +35,6 @@ All the Units are in percentage except Population
 - Jupyter Notebook
 
 ## Libraries
-- Python 
 - Pandas 
 - Scikit-learn
 - Jupyter
@@ -117,16 +116,20 @@ Supervised Learning (Decision Trees):
 For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 92% accuracy on predicting which cluster a Country belongs to based on food and health factors of the Country.
 
 
-## Known Issues
+## Issues and Solutions
 
-Amount of observations are limited since the data is aggregated by Country.
+Amount of observations are limited since the data is aggregated by Country and we moved forward with the analysis with the same. There were 23 food related attributes in the data, we were able to reduce them to 3 by finding the relationship between them.
+
+## Instructions to run the project
+
+Install the technologies necessary and run the Jupyter Notebook from the Anaconda prompt window.
 
 ## Conclusion 
 
 We gathered, understood and pre-processed the data. Unique trait about the dataset is that it has miniature details of all the different types of foods consumed across the world. We answered the research question by performing Exploratory Data Analysis and creating multiple visualizations to get more insights on the dataset. Top 15 countries were identified based on Death, Obesity and Undernourishment rates. Additionally, the varying  patterns of the death and Obesity percentages among these countries were recognized.
 	
-Machine Learning Algorithms K means Clustering, Agglomerative Hierarchal and Decision trees are performed as a part of  CRISP - DM process. These algorithms were evaluated using Elbow method and performance metrics such as accuracy and recall were obtained using confusion matrix and classification report.
+Machine Learning Algorithms K means Clustering, Agglomerative Hierarchal Clustering and Decision trees are performed as a part of CRISP - DM process. These algorithms were evaluated using Elbow method and performance metrics such as accuracy and recall were obtained using confusion matrix and classification report.
 
 There might be many external factors that affect the COVID death rates  in countries across the world. However, our analysis shows that maintaining a healthy diet and consuming food products with less fat reduces the risk of Obesity and can reduce the amount of deaths resulting due to COVID-19.
 
-For future scope, we plan to come up with the Machine Learning models with better accuracy and other performance metrics.
+For future scope, we plan to include data related to other health factors and analyze how COVID-19 deaths are affected. We will try to build Machine Learning model with better accuracy and other performance metrics.
