@@ -91,7 +91,7 @@ Unsupervised Learning (Clustering):
 
 ### Evaluation 
 
-For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a country belongs to based on food and health factors of the country.¶
+For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a country belongs to based on food and health factors of the country.
 
 ## Technologies/Libraries
 - Python 
