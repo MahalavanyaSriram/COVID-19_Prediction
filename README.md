@@ -25,9 +25,20 @@ Dataset Name:datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 ## Attribute Description	
 
-![Alt text](/Images/DataTable.jpeg?raw=true "Data Table")
+![Alt text](/[images/DataTable.jpeg?raw=true "Data Table")
 
 All the Units are in percentage except Population
+
+## Technologies/Libraries
+- Python 
+- Pandas 
+- Scikit-learn
+- Jupyter
+- Numpy
+- Seaborn
+- Scipy 
+- Altair
+- Plotly
 
 ## Approach
   
@@ -41,23 +52,23 @@ EDA will help to give insight of data and understand latest trends. To explore d
 
 1. Top 15 Countries where the Death Rate is high.
 
-![country_vs_deaths](/Images/country_vs_deaths.png)
+![country_vs_deaths](/images/country_vs_deaths.png)
 
 2. Countries with highest Obesity Rate.
 
-![country_vs_obesity](/Images/country_vs_obesity.png)
+![country_vs_obesity](/images/country_vs_obesity.png)
 
 3. Countries that are highly undernourished.
 
-![death_vs_undernourished](/Images/country_vs_undernourished.png)
+![death_vs_undernourished](/images/country_vs_undernourished.png)
 
 4. Death vs Obesity Pecentage for Countries with highest Death rates.
 
-![death_vs_obesity](/Images/newplot.png)
+![death_vs_obesity](/images/newplot.png)
 
 5. Percentage of food supply in COVID affected Countries.
 
-![percent_food_supply](/Images/percent_food_supply.png)
+![percent_food_supply](/images/percent_food_supply.png)
 
 ### Data Preparation 
 
@@ -74,51 +85,36 @@ Steps that were followed in Data Cleaning & Data Pre-processing: .
     When we convert the dataset to the CSV format and get the information about the data it will have missing values which is usually represented by NA. There are many         ways to handle missing values. Whenever we came across minute missing values we are going to drop the rows using the .dropna function. Ex. missing values in 'Confirmed', 'Deaths', and 'Recovered' columns were dropped as most of them are geographically dispersed islands and not directly affected by COVID We handled few missing values filling it with the mean of the column like missing values in the 'Obesity' and 'Undernourished' columns by replacing with their mean. We also handled the missing values for 'Active’ column using columns 'Confirmed' and 'Recovered'- the data for confirmed COVID cases, deaths, and recovered are available (not missing) in the data, so we replaced the missing values in the 'Active' column appropriately by subtracting the confirmed cases by deaths and recovered.
    - Data reduction: Since the data in the sample has long decimal values, we rounded them to four decimal places inorder to reduce the storage capacity
 
-4. Transform and enrich data
-Transforming data is the process of updating the format or value entries in order to reach a well-defined outcome, or to make the data more easily understood by a wider audience. In our dataset, transformation is done with attribute ‘Undernourished’ where entries with '<2.5' were replaced with 2.5; object type of this column was changed to float. Enriching data refers to adding and connecting data with other related information to provide deeper insights. It is observed that cereals (excluding beer) is the highly consumed food product in our dataset; so, we included this attribute as well to gain more insights.  
+4. Transform and enrich data: Transforming data is the process of updating the format or value entries in order to reach a well-defined outcome, or to make the data more easily understood by a wider audience. In our dataset, transformation is done with attribute ‘Undernourished’ where entries with '<2.5' were replaced with 2.5; object type of this column was changed to float. Enriching data refers to adding and connecting data with other related information to provide deeper insights. It is observed that cereals (excluding beer) is the highly consumed food product in our dataset; so, we included this attribute as well to gain more insights.  
 
 
 ### Machine Learning   
 
-We can apply a regression model with the predictor variables as different food types and health factors. The outcome variable will be the fatality rate of COVID-19.  We can also look at clustering the dataset to see how different countries are grouped based on food consumption, health factors and their effect on COVID death rates. 
+We performed Unsupervised learning using Clustering to see how different countries are grouped based on food consumption, health factors and COVID death rates. And we executed Supervised learning using Decision trees.
 
 Unsupervised Learning (Clustering):
 - Since all other foods add up to attributes 'Animal products' and 'Vegetal products', we altered the data to include only these attributes to avoid multi-colinearity
 - Data was scaled with RobustScaler()
 - Completed Principle Component Analysis i.e, PCA (using sklearn.decomposition) in order to see how much variability each principle component captured, and found that we could capture close to 90% of the variation from the first two components, so we decided to proceed with 2 components
 - KMeans clustering (from sklearn.cluster) performed with 3 clusters 
-![KMeans Clustering](/Images/kmeans_clustering.png)
 - In KMeans clustering, we need to decide the clusters before implementing the algorithm. Sometimes, we may not correctly interpret the number of clusters and it becomes challenging to predict the number of clusters. For Hierarchical clustering, we need not know the number of clusters prior to implementing the algorithm. Due to these reasons, we chose to perform Agglomerative Hierarchial clustering.
 - Before implementing Hierarchical Clustering, the data was normalized (normalize from sklearn.preprocessing) so as to maintain same for each variable. If the variables are not scaled, there are chances that the model might become biased towards the variables with a larger magnitude.
 - The linkage() function was used to obtain a hierarchical clustering on the data samples, and a Dendrogram was used to visualize the result.
-![Dendrogram](/Images/dendrogram.png)
 - We can see that the vertical line with maximum distance is the blue line and hence we can decide a threshold of 3 to cut the dendrogram. The line cuts the dendogram at two points. So, we have two clusters. Applying the Agglomerative hierarchical clustering for 2 clusters. We can visually see the two clusters in the scatter plot for Obesity Vs Covd-19 Death rate.
-![Hierarchical Clustering](/Images/hierarchical_clustering.png)
 
 Supervised Learning (Decision Trees):
 - Next, we decided to build a decision tree using DecisionTreeClassifier from sklearn.tree. 
-![Decision Tree](/Images/Desicion_Tree.png)
 - It seems that cluster 1 can be described by countries that obesity greater than -0.354, consume less than -0.12 vegetal products, and have undernourishment rate less than -0.029. Cluster 2 can be described by countries that have obesity greater than -0.354, deaths > 3.4, and undernourishment rate greater than 1.392. Cluster 3 can be described by countries that have obesity greater than -0.354, and deaths less than 3.4. Based on this cluster 2 contains countries that have the highest fatalities, and should make lifestyle / policy changes for the future.
 
 
 ### Evaluation 
 
-For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a country belongs to based on food and health factors of the country.
+For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a Country belongs to based on food and health factors of the Country.
 
-## Technologies/Libraries
-- Python 
-- Pandas 
-- Scikit-learn
-- Jupyter
-- Numpy
-- Seaborn
-- Scipy 
-- Altair
-- Plotly
 
 ## Known Issues
 
-Amount of observations are limited since the data is aggregated by country.
+Amount of observations are limited since the data is aggregated by Country.
 
 ## Conclusion 
 
