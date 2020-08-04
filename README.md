@@ -87,17 +87,13 @@ Unsupervised Learning (Clustering):
 - Data was scaled with RobustScaler()
 - Completed Principle Component Analysis i.e, PCA (using sklearn.decomposition) in order to see how much variability each principle component captured, and found that we could capture close to 90% of the variation from the first two components, so we decided to proceed with 2 components
 - KMeans clustering (from sklearn.cluster) performed with 3 clusters 
-![KMeans Clustering](/Images/kmeans_clustering.png)
 - In KMeans clustering, we need to decide the clusters before implementing the algorithm. Sometimes, we may not correctly interpret the number of clusters and it becomes challenging to predict the number of clusters. For Hierarchical clustering, we need not know the number of clusters prior to implementing the algorithm. Due to these reasons, we chose to perform Agglomerative Hierarchial clustering.
 - Before implementing Hierarchical Clustering, the data was normalized (normalize from sklearn.preprocessing) so as to maintain same for each variable. If the variables are not scaled, there are chances that the model might become biased towards the variables with a larger magnitude.
 - The linkage() function was used to obtain a hierarchical clustering on the data samples, and a Dendrogram was used to visualize the result.
-![Dendrogram](/Images/dendrogram.png)
 - We can see that the vertical line with maximum distance is the blue line and hence we can decide a threshold of 3 to cut the dendrogram. The line cuts the dendogram at two points. So, we have two clusters. Applying the Agglomerative hierarchical clustering for 2 clusters. We can visually see the two clusters in the scatter plot for Obesity Vs Covd-19 Death rate.
-![Hierarchical Clustering](/Images/hierarchical_clustering.png)
 
 Supervised Learning (Decision Trees):
 - Next, we decided to build a decision tree using DecisionTreeClassifier from sklearn.tree. 
-![Decision Tree](/Images/Desicion_Tree.png)
 - It seems that cluster 1 can be described by countries that obesity greater than -0.354, consume less than -0.12 vegetal products, and have undernourishment rate less than -0.029. Cluster 2 can be described by countries that have obesity greater than -0.354, deaths > 3.4, and undernourishment rate greater than 1.392. Cluster 3 can be described by countries that have obesity greater than -0.354, and deaths less than 3.4. Based on this cluster 2 contains countries that have the highest fatalities, and should make lifestyle / policy changes for the future.
 
 
