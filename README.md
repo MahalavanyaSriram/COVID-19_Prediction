@@ -87,6 +87,7 @@ Unsupervised Learning (Clustering):
 - Data was scaled with RobustScaler()
 - Completed Principle Component Analysis i.e, PCA (using sklearn.decomposition) in order to see how much variability each principle component captured, and found that we could capture close to 90% of the variation from the first two components, so we decided to proceed with 2 components
 - KMeans clustering (from sklearn.cluster) performed with 3 clusters 
+![KMeans Clustering](/Images/kmeans_clustering.png)
 - In KMeans clustering, we need to decide the clusters before implementing the algorithm. Sometimes, we may not correctly interpret the number of clusters and it becomes challenging to predict the number of clusters. For Hierarchical clustering, we need not know the number of clusters prior to implementing the algorithm. Due to these reasons, we chose to perform Agglomerative Hierarchial clustering.
 
 ### Evaluation 
