@@ -89,6 +89,10 @@ Unsupervised Learning (Clustering):
 - KMeans clustering (from sklearn.cluster) performed with 3 clusters 
 ![KMeans Clustering](/Images/kmeans_clustering.png)
 - In KMeans clustering, we need to decide the clusters before implementing the algorithm. Sometimes, we may not correctly interpret the number of clusters and it becomes challenging to predict the number of clusters. For Hierarchical clustering, we need not know the number of clusters prior to implementing the algorithm. Due to these reasons, we chose to perform Agglomerative Hierarchial clustering.
+- Before implementing Hierarchical Clustering, the data was normalized (normalize from sklearn.preprocessing) so as to maintain same for each variable. If the variables are not scaled, there are chances that the model might become biased towards the variables with a larger magnitude.
+- The linkage() function was used to obtain a hierarchical clustering on the data samples, and a Dendrogram was used to visualize the result.
+- We can see that the vertical line with maximum distance is the blue line and hence we can decide a threshold of 3 to cut the dendrogram. The line cuts the dendogram at two points. So, we have two clusters. Applying the Agglomerative hierarchical clustering for 2 clusters.
+
 
 ### Evaluation 
 
