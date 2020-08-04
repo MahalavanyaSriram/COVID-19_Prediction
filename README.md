@@ -29,6 +29,17 @@ Dataset Name:datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 All the Units are in percentage except Population
 
+## Technologies/Libraries
+- Python 
+- Pandas 
+- Scikit-learn
+- Jupyter
+- Numpy
+- Seaborn
+- Scipy 
+- Altair
+- Plotly
+
 ## Approach
   
 ### Data understanding & Exploratory Data Analysis(EDA)
@@ -101,16 +112,6 @@ Supervised Learning (Decision Trees):
 
 For K means clustering, we used Elbow method for evaluation. This method of evaluation gives us the best value of k without having to assign it randomly. Also, using a 70-30 split, we were able to get 88% accuracy on predicting which cluster a country belongs to based on food and health factors of the country.
 
-## Technologies/Libraries
-- Python 
-- Pandas 
-- Scikit-learn
-- Jupyter
-- Numpy
-- Seaborn
-- Scipy 
-- Altair
-- Plotly
 
 ## Known Issues
 
