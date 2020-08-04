@@ -25,7 +25,7 @@ Dataset Name: datasets_618335_1356210_Food_Supply_Quantity_kg_Data.csv
 
 ## Attribute Description	
 
-![Alt text](/[images/DataTable.jpeg?raw=true "Data Table")
+![Alt text](/[images/DataTable.jpeg?raw=true "Data Table"])
 
 All the Units are in percentage except Population
 
