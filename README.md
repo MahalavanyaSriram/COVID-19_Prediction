@@ -92,7 +92,9 @@ Unsupervised Learning (Clustering):
 - Before implementing Hierarchical Clustering, the data was normalized (normalize from sklearn.preprocessing) so as to maintain same for each variable. If the variables are not scaled, there are chances that the model might become biased towards the variables with a larger magnitude.
 - The linkage() function was used to obtain a hierarchical clustering on the data samples, and a Dendrogram was used to visualize the result.
 ![Dendrogram](/Images/dendrogram.png)
-- We can see that the vertical line with maximum distance is the blue line and hence we can decide a threshold of 3 to cut the dendrogram. The line cuts the dendogram at two points. So, we have two clusters. Applying the Agglomerative hierarchical clustering for 2 clusters.
+- We can see that the vertical line with maximum distance is the blue line and hence we can decide a threshold of 3 to cut the dendrogram. The line cuts the dendogram at two points. So, we have two clusters. Applying the Agglomerative hierarchical clustering for 2 clusters. We can visually see the two clusters in the scatter plot for Obesity Vs Covd-19 Death rate.
+![Hierarchical Clustering](/Images/hierarchical_clustering.png)
+
 
 
 ### Evaluation 
